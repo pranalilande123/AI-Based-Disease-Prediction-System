@@ -470,6 +470,9 @@ elif page == "🩺 Diabetes Predictor":
     # Execution of Prediction upon button click
     if btn_analyze:
         input_data = {
+        if btn_analyze:
+    st.success("Button click detected!")
+    input_data = {
             'Pregnancies': float(in_preg), 'Glucose': float(in_glucose),
             'BloodPressure': float(in_bp), 'SkinThickness': float(in_skin),
             'Insulin': float(in_insulin), 'BMI': float(in_bmi),
