@@ -471,7 +471,7 @@ elif page == "🩺 Diabetes Predictor":
 if btn_analyze:
     st.success("Button click detected!")
 
-    input_data = {
+      input_data = {
         'Pregnancies': float(in_preg),
         'Glucose': float(in_glucose),
         'BloodPressure': float(in_bp),
@@ -482,13 +482,13 @@ if btn_analyze:
         'Age': float(in_age)
     }
 
-        input_df = pd.DataFrame([input_data])
-        input_df = pd.DataFrame([input_data])
-        for col, med in imputer_medians.items():
-            if input_df[col].iloc[0] == 0:
-                input_df[col] = med
+    input_df = pd.DataFrame([input_data])
 
-        input_scaled = scaler.transform(input_df)
+    for col, med in imputer_medians.items():
+        if input_df[col].iloc[0] == 0:
+            input_df[col] = med
+
+    input_scaled = scaler.transform(input_df)
         model = all_models.get(sel_model_name, best_model)
         pred = int(model.predict(input_scaled)[0])
 
