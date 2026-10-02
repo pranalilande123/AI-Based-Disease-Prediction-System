@@ -467,7 +467,7 @@ elif page == "🩺 Diabetes Predictor":
         """, unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
 
-  # Execution of Prediction upon button click
+# Execution of Prediction upon button click
 if btn_analyze:
     st.success("Button click detected!")
 
@@ -481,6 +481,8 @@ if btn_analyze:
         'DiabetesPedigreeFunction': float(in_pedigree),
         'Age': float(in_age)
     }
+
+    input_df = pd.DataFrame([input_data])
         input_df = pd.DataFrame([input_data])
         for col, med in imputer_medians.items():
             if input_df[col].iloc[0] == 0:
