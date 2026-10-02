@@ -13,7 +13,7 @@ venv/
 # IDE files
 .vscode/
 
-# Local databases - avoid uploading user/prediction records
+# Local databases
 *.db
 *.sqlite
 *.sqlite3
