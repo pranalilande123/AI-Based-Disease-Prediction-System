@@ -467,7 +467,7 @@ elif page == "🩺 Diabetes Predictor":
         """, unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
 
-# Execution of Prediction upon button click
+        # Execution of Prediction upon button click
 if btn_analyze:
     st.success("Button click detected!")
 
