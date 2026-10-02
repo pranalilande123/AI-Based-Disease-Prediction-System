@@ -482,7 +482,7 @@ if btn_analyze:
         'Age': float(in_age)
     }
 
-    input_df = pd.DataFrame([input_data])
+        input_df = pd.DataFrame([input_data])
         input_df = pd.DataFrame([input_data])
         for col, med in imputer_medians.items():
             if input_df[col].iloc[0] == 0:
